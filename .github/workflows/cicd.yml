@@ -25,7 +25,7 @@ jobs:
           port: ${{ secrets.SSH_PORT}}
           script: |
             cd ~/se2/24/se2-example-backend
-            git reser --hard origin/main
+            git reset --hard origin/main
             git pull https://${{ secrets.CLONE_TOKEN }}@github.com/EleniCharitou/se2-example-backend main
             bash -ci 'npm install'
             bash - ci 'pm2 restart example-backend-24'
